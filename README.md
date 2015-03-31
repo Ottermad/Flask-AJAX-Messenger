@@ -9,7 +9,7 @@ The application works by having a series of routes in Flask. Some of these route
 
 ### Technologies Used
 
-* #### Languages
+* Languages
     * Python - the main language used to implement the backend of my application.
     * HTML
     * CSS
