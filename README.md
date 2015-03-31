@@ -13,22 +13,23 @@ The application works by having a series of routes in Flask. Some of these route
     * Python - the main language used to implement the backend of my application.
     * HTML
     * CSS
-    * JavaScript
+    * JavaScript - mostly used to make requests using AJAX, parse the returned JSON and update appropiate elements/
 * Python Packages and Modules
     * Flask - a micro-framework for Python that powers the backend of my application.
-    * Jinja2 - the default templating engine from Flask, I used to not only create dynamic templates but keep inline JavaScript in a seperate file.
-    * Flask-Login
-    * Flask-Bcrypt
-    * WTForms
-    * Flask-WTForms
-    * json
-    * re
-    * Peewee
-    * Markdown
+    * Jinja2 - the default templating engine from Flask, I used it to not only create dynamic templates but keep inline JavaScript in a seperate file.
+    * Flask-Login - used to provide login functionality to the application.
+    * Flask-Bcrypt - used to hash the passwords
+    * WTForms - used to help build dynamic login and registration forms
+    * Flask-WTForms - used to help build dynamic login and registration forms
+    * json - used to convert python objects to JSON for the requests sent via AJAX
+    * re - used to allow the use of regular expressions on strings
+    * Peewee - an lightweight ORM used to store my data
+    * Markdown - used to convert markdown to HTML so messages can make use of markdown
 * Front-end libraries
     * jQuery
-    * Twitter Bootstrap
-    * Flat-UI
+    * Twitter Bootstrap - improve the deisgn of the application
+    * Flat-UI - [http://designmodo.com/flat-free/](http://designmodo.com/flat-free/) - a Bootstrap theme used to create a more unique design
 * Other Technologies
-    * JSON
-    * SQLite3
+    * JSON - the format of data returned to the AJAX scripts
+    * SQLite3 - although the Peewee ORM is used to interact with the database, a SQLite db is used
+    * Regular Expressions - used to perform string operations
