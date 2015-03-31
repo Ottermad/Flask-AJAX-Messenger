@@ -17,10 +17,18 @@ The application works by having a series of routes in Flask. Some of these route
 * Python Packages and Modules
     * Flask - a micro-framework for Python that powers the backend of my application.
     * Jinja2 - the default templating engine from Flask, I used to not only create dynamic templates but keep inline JavaScript in a seperate file.
+    * Flask-Login
+    * Flask-Bcrypt
     * WTForms
     * Flask-WTForms
     * json
     * re
     * Peewee
-    * PyMySql
-* 
+    * Markdown
+* Front-end libraries
+    * jQuery
+    * Twitter Bootstrap
+    * Flat-UI
+* Other Technologies
+    * JSON
+    * SQLite3
