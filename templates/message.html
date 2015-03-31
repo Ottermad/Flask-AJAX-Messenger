@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block ajax %}
+	{% include "ajax_functions.html" %}
+	<script type="text/javascript">
+		$(document).ready(
+			$("#content").keyup(function (e) {
+				if (e.keyCode == 13) {
+					sendMessage();
+				}
+			})
+		);
+	</script>
+{% endblock %}
+{% block content %}
+	<div class="row">
+		<h3>Hello {{ username }}</h3>
+		<form method="POST" class="form-horizontal">
+			<div class="field-group">
+				<label for="to_user" class="col-sm-1">To: </label>
+				<div class="col-sm-4">
+					<input type="text" name="to_user" id="to_user" class="form-control">
+				</div>
+			</div>
+			<div class="field-group">
+				<label for="content" class="col-sm-1">Content: </label>
+				<div class="col-sm-5">
+					<input type="text" name="content" id="content" class="form-control">
+				</div>
+			</div>
+				<button type="button" id="sendBtn" onclick="sendMessage()" class="btn btn-success col-sm-1">Send</button>
+		</form>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Users</h3>
+			<ul id="users">
+				{% for user in users %}
+					<li>
+						<button type="button" class="btn btn-info" onclick="getMessagesOnClick('{{ user }}')">{{ user }}</button>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		
+		<div class="col-md-6">
+			<h3>Messages (click on a user)</h3>
+			<input type="hidden" value="none" id="user_to_fetch">
+			<ul id="messages"></ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function auto_update () {
+			console.log("I'm here!");
+			var user_to_fetch = document.getElementById("user_to_fetch");
+			if (user_to_fetch.value === "none") {
+				// do nothing
+			} else {
+			    getMessagesOnClick(user_to_fetch.value);
+
+			}
+			setTimeout(auto_update, 10000);
+		}
+		
+		auto_update();
+
+		
+	</script>
+{% endblock %}
