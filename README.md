@@ -19,7 +19,8 @@ The application works by having a series of routes in Flask. Some of these route
     * Jinja2 - the default templating engine from Flask, I used to not only create dynamic templates but keep inline JavaScript in a seperate file.
     * WTForms
     * Flask-WTForms
-    * JSON
+    * json
     * re
-    * 
+    * Peewee
+    * PyMySql
 * 
