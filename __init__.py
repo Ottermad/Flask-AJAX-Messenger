@@ -148,7 +148,7 @@ def message():
 def new_message():
     result = {"result": None}
     try:
-        my_content = cleanhtml(request.form["content"])
+        my_content = clean_html(request.form["content"])
         models.Message.create(
             from_user=g.user._get_current_object(),
             to_user=models.User.get_user(request.form["to_user"]),
