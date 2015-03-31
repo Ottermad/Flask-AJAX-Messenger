@@ -47,7 +47,6 @@ class User(UserMixin, Model):
         return usernames
 
 
-
 class Message(Model):
     timestamp = DateTimeField(default=datetime.datetime.now)
     to_user = ForeignKeyField(
