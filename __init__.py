@@ -42,7 +42,7 @@ login_manager.login_view = "login"
 # Non route functions
 
 
-def cleanhtml(raw_html):
+def clean_html(raw_html):
     cleanr = re.compile('<.*?>')
     cleantext = re.sub(cleanr, '', raw_html)
     return cleantext
